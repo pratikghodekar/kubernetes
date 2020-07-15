@@ -18,6 +18,8 @@ jobs:
        - image: ansible/ansible:ubuntu1604
     steps:
       - checkout
+      - setup_remote_docker:
+          docker_layer_caching: true
       - run:
           name: deploy
           command: |
